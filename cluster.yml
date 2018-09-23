@@ -10,7 +10,7 @@
 
 # Run roles common to all hosts in cluster
 - hosts: cluster
-  user: root
+  user: hpcadmin
   vars_files:
   - config.yml
   roles:
@@ -20,7 +20,7 @@
   - "ganglia-gmond"
 
 # Run roles specific to the cluster headnode
-- hosts: head
+- hosts: headN
   user: root
   vars_files:
   - config.yml

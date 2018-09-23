@@ -14,10 +14,10 @@
 # can change it.
 
 [head]
-52.5.44.27         setname=headN
+10.0.0.254         setname=headN
 
 [compute]
-52.6.164.63         setname=compN0
+10.0.0.5         setname=compN0
 [cluster:children]
 head
 compute

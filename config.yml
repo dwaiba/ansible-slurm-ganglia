@@ -6,4 +6,3 @@
 
 slurmctld_host: headN
 slurm_cpus_per_node: 2
-upload_osu_benchmarks: true

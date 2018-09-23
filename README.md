@@ -4,12 +4,6 @@ ansible-simple-slurm-cluster
 This repo contains a set of Ansible roles for setting up a relatively basic
 HPC-style compute cluster, along with an example playbook for using them.
 
-**These scipts should not be considered production-quality!** (Though
-you can always use them or get inspiration from them if you like.) I use
-the roles in this repo to set up ephemeral clusters while playing with new
-ideas or writing software. I am rarely concerned with stability or user
-experience, and more often with seeing what I can break. :) YMMV!
-
 So what does it do?
 -------------------
 
@@ -18,16 +12,13 @@ So what does it do?
 - [Ganglia](http://ganglia.sourceforge.net/) monitoring system (not using multicast )
 
 
-
 Prerequisites
 -------------
 - [SLURM](http://slurm.schedmd.com) and [Munge](https://code.google.com/p/munge/) 
-  are not distributed as RPMs, so I built those RPMs and stuck
-  them in a repository on S3. The "ajdecon-repo" role configures each node of
-  the cluster to include this repo when installing software.
+  are not distributed as RPMs, so built with rpmbuild.
 
 
-How do I use the playbook?
+How to use the playbook?
 --------------------------
 
 1. Set up an Ansible [inventory file](http://docs.ansible.com/intro_inventory.html)
