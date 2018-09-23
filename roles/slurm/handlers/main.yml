@@ -1,0 +1,9 @@
+---
+- name: munge is restarted
+  service: name=munge state=restarted
+
+- name: slurm is restarted
+  service: name=slurm state=restarted
+
+- name: rsyslog is restarted
+  service: name=rsyslog state=restarted

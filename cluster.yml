@@ -1,0 +1,28 @@
+---
+# This Ansible playbook sets up a relatively basic HPC-style compute cluster
+# using the SLURM resource manager. Configures Ganglia to make it
+# easier to monitor.
+#
+# Note that the file config.yml is used to define some variables which
+# configure the roles' behavior. The roles should be written in such a way that
+# you can run with all the defaults, and leave config.yml empty.
+
+
+# Run roles common to all hosts in cluster
+- hosts: cluster
+  user: root
+  vars_files:
+  - config.yml
+  roles:
+  - "sethostname"
+  - "etchosts"
+  - "slurm"
+  - "ganglia-gmond"
+
+# Run roles specific to the cluster headnode
+- hosts: head
+  user: root
+  vars_files:
+  - config.yml
+  roles:
+  - "ganglia-gmetad"
